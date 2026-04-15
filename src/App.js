@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import TodoList from "./components/TodoList";
-import Contador from "./components/Contador";
-import JogoDaVelha from "./components/JogoDaVelha";
-import Calculadora from "./components/Calculadora";
-import BuscadorCEP from "./components/BuscadorCEP";
+import Header from "./Componentes/Header";
+import TodoList from "./Componentes/TodoList";
+import Contador from "./Componentes/Contador";
+import JogoDaVelha from "./Componentes/JogoDaVelha";
+import Calculadora from "./Componentes/Calculadora";
+import BuscadorCEP from "./Componentes/BuscadorCEP";
 
 function App() {
   const [pagina, setPagina] = useState("todo");
