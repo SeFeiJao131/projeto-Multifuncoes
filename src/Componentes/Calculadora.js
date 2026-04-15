@@ -7,7 +7,7 @@ function Calculadora() {
   const calcular = () => {
     try {
       // separa números e operadores
-      const tokens = valor.match(/(\d+|\+|\-|\*|\/)/g);
+    const tokens = valor.match(/(\d+|\+|-|\*|\/)/g);
 
       if (!tokens) {
         setResultado("Erro");
