@@ -6,11 +6,25 @@ function Calculadora() {
 
   const calcular = () => {
     try {
-      // substitui símbolos pra funcionar corretamente
-      const expressao = valor.replace(/×/g, "*").replace(/÷/g, "/");
+      // separa números e operadores
+      const tokens = valor.match(/(\d+|\+|\-|\*|\/)/g);
 
-      // usa Function ao invés de eval (mais aceito)
-      const res = new Function("return " + expressao)();
+      if (!tokens) {
+        setResultado("Erro");
+        return;
+      }
+
+      let res = parseFloat(tokens[0]);
+
+      for (let i = 1; i < tokens.length; i += 2) {
+        const operador = tokens[i];
+        const num = parseFloat(tokens[i + 1]);
+
+        if (operador === "+") res += num;
+        else if (operador === "-") res -= num;
+        else if (operador === "*") res *= num;
+        else if (operador === "/") res /= num;
+      }
 
       setResultado(res);
     } catch {
