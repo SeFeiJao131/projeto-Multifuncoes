@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #222;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
