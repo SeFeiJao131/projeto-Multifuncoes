@@ -14,11 +14,12 @@ function JogoDaVelha() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Jogo da Velha</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 60px)" }}>
+
+      <div className="grid">
         {tabuleiro.map((v, i) => (
-          <button key={i} onClick={() => jogar(i)}>
+          <button key={i} onClick={() => jogar(i)} className="cell">
             {v}
           </button>
         ))}

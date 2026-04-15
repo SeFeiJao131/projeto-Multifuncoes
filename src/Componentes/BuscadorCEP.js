@@ -11,16 +11,22 @@ function BuscadorCEP() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Buscar CEP</h2>
-      <input value={cep} onChange={(e) => setCep(e.target.value)} />
+
+      <input
+        value={cep}
+        onChange={(e) => setCep(e.target.value)}
+        placeholder="Digite o CEP"
+      />
+
       <button onClick={buscar}>Buscar</button>
 
       {dados && (
         <div>
-          <p>{dados.logradouro}</p>
-          <p>{dados.bairro}</p>
-          <p>{dados.localidade}</p>
+          <p><strong>Rua:</strong> {dados.logradouro}</p>
+          <p><strong>Bairro:</strong> {dados.bairro}</p>
+          <p><strong>Cidade:</strong> {dados.localidade}</p>
         </div>
       )}
     </div>

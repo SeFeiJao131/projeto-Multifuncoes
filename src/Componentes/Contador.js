@@ -4,9 +4,10 @@ function Contador() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <div className="container">
       <h2>Contador</h2>
-      <p>{count}</p>
+      <h1>{count}</h1>
+
       <button onClick={() => setCount(count + 1)}>Clique</button>
     </div>
   );

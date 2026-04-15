@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./App.css";
+
 import Header from "./Componentes/Header";
 import TodoList from "./Componentes/TodoList";
 import Contador from "./Componentes/Contador";

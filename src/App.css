@@ -37,19 +37,91 @@
   }
 }
 body {
-  font-family: Arial;
-  text-align: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: white;
 }
 
-header {
+/* HEADER */
+.header {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #1e293b;
+}
+
+.nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  background: #222;
-  padding: 10px;
 }
 
+/* BOTÕES */
 button {
-  padding: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #020617;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+  width: 70%;
+}
+
+/* LISTA */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #1e293b;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* JOGO */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.cell {
+  height: 80px;
+  font-size: 20px;
+}
+
+/* CALCULADORA */
+.grid-calc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }

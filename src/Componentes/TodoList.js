@@ -5,14 +5,21 @@ function TodoList() {
   const [input, setInput] = useState("");
 
   const adicionar = () => {
+    if (input === "") return;
     setTarefas([...tarefas, input]);
     setInput("");
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>To-Do List</h2>
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
+
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Digite uma tarefa..."
+      />
+
       <button onClick={adicionar}>Adicionar</button>
 
       <ul>
